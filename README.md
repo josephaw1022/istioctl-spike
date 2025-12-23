@@ -30,7 +30,7 @@ Both clusters use MetalLB for LoadBalancer support and are configured for cross-
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/istioctl-spike.git
+   git clone https://github.com/josephaw1022/istioctl-spike.git
    cd istioctl-spike
    ```
 
