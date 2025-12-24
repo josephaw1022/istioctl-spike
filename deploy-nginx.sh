@@ -114,7 +114,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: ${NGINX_IMAGE}
         ports:
         - containerPort: 80
 ---
@@ -252,6 +252,5 @@ echo "The nginx service demonstrates accessing workloads that ONLY exist on the"
 echo "remote cluster (cluster2) through the primary cluster's ingress gateway."
 echo ""
 echo "To clean up:"
-echo "  kubectl delete namespace ${NAMESPACE} --context=${CTX_CLUSTER1}"
-echo "  kubectl delete namespace ${NAMESPACE} --context=${CTX_CLUSTER2}"
+echo " task clean-nginx"
 echo ""
