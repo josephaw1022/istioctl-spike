@@ -45,7 +45,9 @@ log_info "Loading images into cluster1..."
 kind load docker-image "${HELLOWORLD_V1_IMAGE}" "${CURL_IMAGE}" --name cluster1
 
 log_info "Loading images into cluster2..."
-kind load docker-image "${HELLOWORLD_V2_IMAGE}" "${CURL_IMAGE}" "${NGINX_IMAGE}" --name cluster2
+kind load docker-image "${HELLOWORLD_V2_IMAGE}" --name cluster2
+kind load docker-image "${CURL_IMAGE}" --name cluster1
+kind load docker-image "${NGINX_IMAGE}" --name cluster2
 
 echo ""
 

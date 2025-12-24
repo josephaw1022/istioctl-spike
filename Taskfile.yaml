@@ -70,3 +70,14 @@ tasks:
     cmds:
       - kubectl delete namespace sample --context kind-cluster1 --interactive=false || true
       - kubectl delete namespace sample --context kind-cluster2 --interactive=false || true
+
+  kiali-setup:
+    desc: Install Prometheus and Kiali addons for Istio
+    cmds:
+      - chmod +x ./kiali-setup.sh
+      - ./kiali-setup.sh
+
+  kiali-dashboard:
+    desc: Open the Kiali dashboard
+    cmds:
+      - istioctl dashboard kiali

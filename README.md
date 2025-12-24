@@ -15,8 +15,14 @@ task # see all available tasks
 task setup # setup the kind clusters and Istio multi-cluster mesh
 task verify-mesh # verify connectivity across clusters
 task deploy-nginx # demo to show cross-cluster service access
+task kiali-setup # install Prometheus and Kiali addons for Istio
+task kiali-dashboard # open the Kiali dashboard
 task clean # tear down the clusters and mesh
 ```
+
+## Kiali Dashboard
+
+![Kiali Dashboard](assets/kiali-dashboard.png)
 
 
 ## Relevant Links
