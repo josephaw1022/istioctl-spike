@@ -29,3 +29,4 @@ task clean # tear down the clusters and mesh
 
 - [Istio Multi-Cluster Documentation](https://istio.io/latest/docs/setup/install/multicluster/)
 - [Istio Multi-Cluster Primary Remote](https://istio.io/latest/docs/setup/install/multicluster/primary-remote/)
+- [Kiali Documentation](https://kiali.io/)
