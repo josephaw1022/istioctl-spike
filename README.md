@@ -20,6 +20,25 @@ task kiali-dashboard # open the Kiali dashboard
 task clean # tear down the clusters and mesh
 ```
 
+## Cluster Components
+
+**cluster1 (Primary)**
+- MetalLB (LoadBalancer IPs)
+- Istio control plane (istiod)
+- Istio ingress gateway (NodePort 30080/30443 which get mapped to port 80/443 on the host)
+- Istio east-west gateway (enable cross-cluster traffic)
+- Localhost gateway (`*.localhost` routing) - relies on istio ingress gateway in place (one with the NodePorts)
+
+**cluster2 (Remote)**
+- MetalLB (LoadBalancer IPs)
+- Istio remote profile (connects to cluster1's istiod)
+- Istio east-west gateway (enable cross-cluster traffic)
+
+**cluster3 (Remote)**
+- MetalLB (LoadBalancer IPs)
+- Istio remote profile (connects to cluster1's istiod)
+- Istio east-west gateway (enable cross-cluster traffic)
+
 ## Kiali Dashboard
 
 ![Kiali Dashboard](assets/kiali-dashboard.png)
